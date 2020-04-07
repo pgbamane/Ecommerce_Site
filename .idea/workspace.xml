@@ -4,22 +4,12 @@
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/css/Green.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Green.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/css/animate.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/animate.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/14255237665e77f39407030.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/14255237665e77f39407030.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/Green.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/Green.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/animate.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/animate.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/banner1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banner1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/banner2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banner2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/banner3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banner3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/category.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/category.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_in_env/images/product.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/product.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/14255237665e77f39407030.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Green.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/font-awesome.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +25,7 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="Setup Script" />
       </list>
     </option>
   </component>
@@ -96,7 +87,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585951698366</updated>
-      <workItem from="1585951728353" duration="10370000" />
+      <workItem from="1585951728353" duration="14610000" />
+      <workItem from="1586281753892" duration="277000" />
     </task>
     <servers />
   </component>
@@ -120,9 +112,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585951740441" />
-    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1586274048745">
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1586275509741">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586274048745" />
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586275509741" />
   </component>
 </project>
