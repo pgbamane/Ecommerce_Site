@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="page-wrapper">
+        <header class="header" id="header">
+
+        </header><!-- End .header -->
+
+
+        <main class="main">
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <div class="home-slider owl-carousel owl-carousel-lazy owl-theme owl-theme-light">
+                                    <div class="home-slide">
+                                        <a href="">
+                                            <div class="owl-lazy slide-bg"
+{#                                            ="../assets/slider/slider1.png"#}
+                                                 data-src="{% static '' %}"></div>
+                                            <div class="home-slide-content text-white">
+                                                <h1><span id="cap1"></span></h1>
+                                            </div><!-- End .home-slide-content --></a>
+                                    </div><!-- End .home-slide -->
+                                    <div class="home-slide">
+                                        <a href="">
+                                            <div class="owl-lazy slide-bg"
+{#                                                 src-path="../assets/slider/slider2.png"#}
+                                                 data-srcs="../assets/slider/slider2.png"></div>
+                                            <div class="home-slide-content text-white">
+                                                <h1><span id="cap2"></span></h1>
+                                            </div><!-- End .home-slide-content --></a>
+                                    </div><!-- End .home-slide -->
+                                    <div class="home-slide">
+                                        <a href="">
+                                            <div class="owl-lazy slide-bg"
+{#                                                 src-path="../assets/slider/slider3.png"#}
+                                                 data-srcs="../assets/slider/slider3.png"></div>
+                                            <div class="home-slide-content text-white">
+                                                <h1><span id="cap3"></span></h1>
+                                            </div><!-- End .home-slide-content --></a>
+                                    </div><!-- End .home-slide -->
+                                    <div class="home-slide">
+                                        <a href="">
+                                            <div class="owl-lazy slide-bg"
+{#                                                 src-path="../assets/slider/slider4.png"#}
+                                                 data-srcs="../assets/slider/slider4.png"></div>
+                                            <div class="home-slide-content text-white">
+                                                <h1><span id="cap4"></span></h1>
+                                            </div><!-- End .home-slide-content --></a>
+                                    </div><!-- End .home-slide -->
+                                    <div class="home-slide">
+                                        <a href="">
+                                            <div class="owl-lazy slide-bg"
+{#                                                 src-path="../assets/slider/slider5.jpg"#}
+                                                 data-srcs="../assets/slider/slider5.jpg"></div>
+                                            <div class="home-slide-content text-white">
+                                                <h1><span id="cap5"></span></h1>
+                                            </div><!-- End .home-slide-content --></a>
+                                    </div><!-- End .home-slide -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock content %}
