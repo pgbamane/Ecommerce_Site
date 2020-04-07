@@ -13,17 +13,18 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/images/icons/favicon.ico">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">#}
 
-    {#    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" >
     <!--  <link rel="stylesheet" type="text/css" href="../assets/css/custom.css"/>-->
     <link rel="stylesheet" href="{% static 'css/Green.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}"/>
 
 </head>
 <body data-gr-c-s-loaded="true" class="loaded">
+
 <div class="loading-overlay">
     <div class="bounce-loader">
         <div class="bounce1"></div>
@@ -33,13 +34,15 @@
 </div>
 <div class="page-wrapper">
     <header class="header" id="header">
-        <script>load_cart_data();
-        sticky_cart_data();</script>
+        <script>
+            load_cart_data();
+            sticky_cart_data();
+        </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-left header-dropdowns">
                     <div class="header-dropdown dropdown-expanded">
-                        <a href="./Orgatma Organic Science Pvt. Ltd._files/index.php">Support</a>
+                        <a href="#">Support</a>
                         <div class="header-menu">
                             <ul>
                                 <li><a href="https://www.orgatma.com/public/faqs.php">FAQ'S </a></li>
