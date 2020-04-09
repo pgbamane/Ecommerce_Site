@@ -1,4 +1,5 @@
-from django.contrib.auth.models import PermissionsMixin, AbstractUser
+# from django.contrib.auth.base_user import
+from django.contrib.auth.models import PermissionsMixin, AbstractBaseUser
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -11,7 +12,7 @@ GENDER_OPTIONS = [
 ]
 
 
-class User(PermissionsMixin, AbstractUser):
+class User(PermissionsMixin, AbstractBaseUser):
     """Django's permission framework gives you all the methods and db fields to support permission model"""
     first_name = models.CharField(db_column="First Name", max_length=15)
     last_name = models.CharField(db_column="Last Name", max_length=30)
