@@ -23,6 +23,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 ]
 
+# auth setting
+AUTH_USER_MODEL = 'users_app.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
