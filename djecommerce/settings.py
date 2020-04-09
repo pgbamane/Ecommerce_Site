@@ -17,7 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'djecommerce',
     'core',
-
+    'users_app',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

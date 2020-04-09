@@ -3,6 +3,8 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
+from users_app.managers.user_managers import UserManager
+
 GENDER_OPTIONS = [
     ('female', 'Female'),
     ('male', 'Male')
@@ -10,7 +12,7 @@ GENDER_OPTIONS = [
 
 
 class User(PermissionsMixin, AbstractUser):
-    "Django's permission framework gives you all the methods and db fields to support permission model"
+    """Django's permission framework gives you all the methods and db fields to support permission model"""
     first_name = models.CharField(db_column="First Name", max_length=15)
     last_name = models.CharField(db_column="Last Name", max_length=30)
     gender = models.CharField(db_column="Gender", max_length=10, choices=GENDER_OPTIONS, default=GENDER_OPTIONS[0][0])
@@ -61,7 +63,7 @@ class User(PermissionsMixin, AbstractUser):
     )
 
     # custom user model defining username field other than username should define Custom Model Manager
-    # objects = UserManager()
+    objects = UserManager()
 
     class Meta:
         db_table = 'auth_user'
