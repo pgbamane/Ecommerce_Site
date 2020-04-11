@@ -72,7 +72,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": 'ecom_db',
-        'USERNAME': 'pradnya',
+        'USER': 'pradnya',
         'PASSWORD': 'girish',
 
     }
