@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/14255237665e77f39407030.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Green.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/animate.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/banner1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banners/banner1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/banner2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banners/banner2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/banner3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banners/banner3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +39,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static_in_env/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images\banners" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images\slides" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\images" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\css" />
     </key>
@@ -88,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1585951698366</updated>
       <workItem from="1585951728353" duration="14610000" />
-      <workItem from="1586281753892" duration="277000" />
+      <workItem from="1586281753892" duration="9686000" />
+      <workItem from="1586403031807" duration="1353000" />
     </task>
     <servers />
   </component>
@@ -104,17 +106,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="302" y="0" width="994" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586244736324" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1586264655210">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1586288184287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1586264655210" />
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1585951740441">
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1586288184287" />
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1586403168597">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585951740441" />
-    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1586275509741">
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586403168597" />
+    <state x="390" y="0" width="670" height="728" key="find.popup" timestamp="1586286889929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586275509741" />
+    <state x="390" y="0" width="670" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586286889929" />
   </component>
 </project>
