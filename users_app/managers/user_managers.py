@@ -10,14 +10,14 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, phone_number, email_id, password=None, **extra_fields):
-        user = self.create_user(phone_number, email_id, password, **extra_fields)
+        user = self.create_user(email_id, password, **extra_fields)
         user.is_superuser = True
         user.is_staff = True
         user.save()
         return user
 
     def create_staffuser(self, phone_number, email_id, password=None, **extra_fields):
-        user = self.create_user(phone_number, email_id, password, **extra_fields)
+        user = self.create_user(email_id, password, **extra_fields)
         user.is_staff = True
         user.save()
         return user
