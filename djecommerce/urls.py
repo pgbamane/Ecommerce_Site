@@ -5,9 +5,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # User management
+    path('users_app/', include('users_app.urls')),
     path('accounts/', include('allauth.urls')),
+
     path('', include('core.urls')),
-    # path('users_app/', include('users_app.urls')),
 ]
 
 if settings.DEBUG:

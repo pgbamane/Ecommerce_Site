@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/managers/user_managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/managers/user_managers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,7 @@
       <workItem from="1586598806772" duration="5355000" />
       <workItem from="1586666768782" duration="9642000" />
       <workItem from="1586684241765" duration="2604000" />
-      <workItem from="1586690022759" duration="4733000" />
+      <workItem from="1586690022759" duration="5502000" />
     </task>
     <task id="LOCAL-00001" summary="users_app created">
       <created>1586458223246</created>
@@ -132,10 +131,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="302" y="0" width="994" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586598425996" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1586672493192">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1586715633993">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1586672493192" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1586715633993" />
     <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1586403168597">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
