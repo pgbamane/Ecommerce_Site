@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +93,7 @@
       <workItem from="1586458110783" duration="3963000" />
       <workItem from="1586462100071" duration="3169000" />
       <workItem from="1586598806772" duration="5355000" />
-      <workItem from="1586666768782" duration="1448000" />
+      <workItem from="1586666768782" duration="2527000" />
     </task>
     <task id="LOCAL-00001" summary="users_app created">
       <created>1586458223246</created>
@@ -134,9 +133,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586403168597" />
-    <state x="390" y="0" width="670" height="728" key="find.popup" timestamp="1586667367436">
+    <state x="390" y="0" width="670" height="728" key="find.popup" timestamp="1586668411821">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="670" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586667367436" />
+    <state x="390" y="0" width="670" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586668411821" />
   </component>
 </project>

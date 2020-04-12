@@ -73,8 +73,8 @@ class User(PermissionsMixin, AbstractBaseUser):
         db_table = 'auth_user'
 
     def __str__(self):
-        "return the user name and phone number of user"
-        return self.get_full_name() + ":" + self.get_username()
+        "return email_id of user"
+        return self.get_username()
 
     def get_username(self):
         "Return the identifying username i.e. phone number for this user"
