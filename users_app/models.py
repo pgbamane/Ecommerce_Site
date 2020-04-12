@@ -71,6 +71,7 @@ class User(PermissionsMixin, AbstractBaseUser):
 
     class Meta:
         db_table = 'auth_user'
+        swappable = 'AUTH_USER_MODEL'
 
     def __str__(self):
         "return email_id of user"

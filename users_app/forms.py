@@ -9,7 +9,7 @@ class CustomUserCreationForm(UserCreationForm):
         exclude = ('date_joined', 'is_active', 'is_staff', 'is_superuser')
 
 
-class CustomeUserChangeForm(UserChangeForm):
+class CustomUserChangeForm(UserChangeForm):
     class Meta(UserCreationForm):
         model = User
         # fields = ('first_name', 'last_name', 'gender', 'address', 'locality', 'state', )
