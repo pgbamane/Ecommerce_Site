@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
-    'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.twitter',
 ]
 
@@ -114,8 +114,8 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
-            'client_id': '123',
-            'secret': '456',
+            'client_id': '314332771646-n58s28s4nnph9j1gvlhdfe2cumu73cph.apps.googleusercontent.com',
+            'secret': 'qEDLx2MKl3ArOYkAhzFbKdXM',
             'key': ''
         }
     }
@@ -126,7 +126,6 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email_id'
-
 
 # ACCOUNT_AUTHENTICATION_METHOD = 'email'
 # ACCOUNT_EMAIL_REQUIRED = True

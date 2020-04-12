@@ -5,6 +5,7 @@ class UserManager(BaseUserManager):
     def create_user(self, phone_number, email_id, password=None, **extra_fields):
         email_id = self.normalize_email(email_id)
         user = self.model(phone_number=phone_number, email_id=email_id, **extra_fields)
+        user.is_active = True
         user.set_password(raw_password=password)
         user.save()
         return user
