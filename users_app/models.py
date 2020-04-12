@@ -37,7 +37,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     EMAIL_FIELD = 'email_id'
     # for createsuperuser command will prompt for following
     # REQUIRED_FIELDS = ['first_name', 'last_name', 'gender', 'phone_number']
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['phone_number']
 
     is_active = models.BooleanField(
         _('is_active'),
