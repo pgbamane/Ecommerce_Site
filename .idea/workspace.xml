@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Setup Script" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -38,20 +38,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\images" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\users_app\managers" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images\banners" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images\slides" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\css" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\images" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -97,7 +98,7 @@
       <workItem from="1586598806772" duration="5355000" />
       <workItem from="1586666768782" duration="9642000" />
       <workItem from="1586684241765" duration="2604000" />
-      <workItem from="1586690022759" duration="5958000" />
+      <workItem from="1586690022759" duration="13021000" />
     </task>
     <task id="LOCAL-00001" summary="users_app created">
       <created>1586458223246</created>

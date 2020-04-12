@@ -26,7 +26,12 @@ INSTALLED_APPS = [
 
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.twitter',
+
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_FAIL_SILENTLY = not DEBUG
 
 # auth setting
 AUTH_USER_MODEL = 'users_app.User'
