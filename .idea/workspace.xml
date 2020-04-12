@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users_app/managers/user_managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/managers/user_managers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +94,7 @@
       <workItem from="1586598806772" duration="5355000" />
       <workItem from="1586666768782" duration="9642000" />
       <workItem from="1586684241765" duration="2604000" />
-      <workItem from="1586690022759" duration="485000" />
+      <workItem from="1586690022759" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="users_app created">
       <created>1586458223246</created>

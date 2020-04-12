@@ -11,6 +11,7 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, phone_number, email_id, password=None, **extra_fields):
         user = self.create_user(phone_number, email_id, password, **extra_fields)
+        user.is_active = True
         user.is_superuser = True
         user.is_staff = True
         user.save()
@@ -18,6 +19,7 @@ class UserManager(BaseUserManager):
 
     def create_staffuser(self, phone_number, email_id, password=None, **extra_fields):
         user = self.create_user(phone_number, email_id, password, **extra_fields)
+        user.is_active = True
         user.is_staff = True
         user.save()
         return user
