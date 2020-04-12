@@ -33,11 +33,14 @@ class User(PermissionsMixin, AbstractBaseUser):
     date_joined = models.DateTimeField(db_column="Date Joined", auto_now_add=True)
 
     USERNAME_FIELD = 'email_id'
+    # no need as email_id is usernamefield
     EMAIL_FIELD = 'email_id'
     # for createsuperuser command will prompt for following
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'gender', 'phone_number']
+    # REQUIRED_FIELDS = ['first_name', 'last_name', 'gender', 'phone_number']
+    REQUIRED_FIELDS = []
 
     is_active = models.BooleanField(
+        _('is_active'),
         db_column="Is Active",
         default=False,
         help_text=_(
