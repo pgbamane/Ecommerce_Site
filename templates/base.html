@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Orgatma Organic Science Pvt. Ltd. </title>
+    <title>Orgatma</title>
     <meta name="keywords" content="Orgatma Organic Science Pvt. Ltd. - Cold press Groundnut Oil"/>
 
     <meta name="description" content="Orgatma Organic Science Pvt. Ltd. - Cold press Groundnut Oil"/>
@@ -77,7 +77,7 @@
                                 <li><a href="https://www.orgatma.com/public/my-account.php">MY ACCOUNT </a></li>
                                 <!-- <li><a href="dailydeals.php">DAILY DEAL</a></li> -->
                                 <li><a href="https://www.orgatma.com/public/wishlist.php">MY WISHLIST </a></li>
-                                <li><a href="https://www.orgatma.com/public/register.php">Register</a></li>
+                                <li><a href="{% url 'account_signup' %}">Register</a></li>
                                 <li>
                                     {% if user.is_authenticated %}
                                         <a href="{% url 'account_logout' %}" class="login-link">LOG OUT</a>

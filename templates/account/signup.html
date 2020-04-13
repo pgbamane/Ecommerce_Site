@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load crispy_forms_tags %}
+    {% load crispy_forms_filters %}
+    <div class="container col-md-offset-2" style="margin: 49px;margin-left: 343px;">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-4" id="form-div" style="background-color: #11ec4736;
+            padding: 45px; border: 1px solid #286090;border-radius: 10px;">
+                {% crispy form %}
+                {#                {{ form|crispy }}#}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
