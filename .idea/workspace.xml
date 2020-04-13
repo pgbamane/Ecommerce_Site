@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/users_app/forms/user_forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +97,7 @@
       <workItem from="1586690022759" duration="16508000" />
       <workItem from="1586731822703" duration="3452000" />
       <workItem from="1586739210651" duration="3865000" />
-      <workItem from="1586744157024" duration="10440000" />
+      <workItem from="1586744157024" duration="10754000" />
     </task>
     <task id="LOCAL-00001" summary="users_app created">
       <created>1586458223246</created>
