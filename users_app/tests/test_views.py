@@ -153,3 +153,34 @@ class SignupViewTestCase(test.TestCase):
         print("Form Errors:", form.errors)
         self.assertFormError(response, 'form', 'email',
                              ['Enter an email address with a valid domain(Gmail, Yahoo, Only)'])
+
+    def test_post_request_form_passwords_must_match(self):
+        signup_form_data = {
+            'first_name': 'Akshay',
+            'last_name': 'Satpute',
+            'gender': 'male',
+            'address': 'satpute mala',
+            'locality': 'waddi',
+            'state': 'Maharashtra',
+            'district': 'Sangli',
+            'city': 'Miraj',
+            'pincode': '416410',
+            'phone_number': '7878457845',
+            'email': 'akshay@gmail.com',
+            'password1': 'satputdnc',
+            'password2': 'satputeps'
+        }
+
+        response = self.client.post(reverse('account_signup'),
+                                    data=signup_form_data,
+                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
+
+        self.assertEqual(response.status_code, 400)
+
+        print("Response Content Type :", response['content-type'])
+        self.assertEqual(response['content-type'], 'application/json')
+
+        form = SignupForm(signup_form_data)
+        print("Form errors : ", form.errors)
+        self.assertFormError(response, 'form', 'password2', 'You must type the same password each time.')
+
