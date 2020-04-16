@@ -8,7 +8,7 @@ class SignupAdapter(DefaultAccountAdapter):
         super(SignupAdapter, self).__init__(request)
 
     def clean_email(self, email):
-        super(SignupAdapter, self).clean_email(email)
+        email = super(SignupAdapter, self).clean_email(email)
         # def clean_email_id(self):
         # email_id = self.cleaned_data['email_id']
         domain = email.split('@')[1]

@@ -122,4 +122,23 @@ class SignupViewTestCase(test.TestCase):
 
         self.assertTemplateUsed(response, 'account/signup.html')
 
+    def test_post_request_form_invalid_domain(self):
+        signup_form_data = {
+            'first_name': 'Akshay',
+            'last_name': 'Satpute',
+            'gender': 'male',
+            'address': 'satpute mala',
+            'locality': 'waddi',
+            'state': 'Maharashtra',
+            'district': 'Sangli',
+            'city': 'Miraj',
+            'pincode': '416410',
+            'phone_number': '7878457845',
+            'email': 'akshay@.com',
+            'password1': 'satputeps',
+            'password2': 'satputeps'
+        }
 
+        response = self.client.post(reverse('account_signup'),
+                                    data=signup_form_data,
+                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
