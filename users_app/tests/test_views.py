@@ -63,6 +63,8 @@ class SignupViewTestCase(test.TestCase):
                                     # for ajax request
                                     HTTP_X_REQUESTED_WITH='XMLHttpRequest')
 
+        # print("Request was ajax:", response.is_ajax())
+
         self.assertEqual(response['content-type'], 'application/json')
 
         print("\nResponse Status Code:", response.status_code)
@@ -80,12 +82,44 @@ class SignupViewTestCase(test.TestCase):
         print("\n Response Json Form:", response.json()['form'])
         self.assertTrue(response.json()['form'])
 
-        # For invalid form: its is successful same page with form errors load: sucessful page load :status 200
-        # for valid form: it will redirect to something ex login page: redirect status code 302
-        # print(response.content)
-        # print("Ajax:", response.is_ajax())
-        # print(form.signup(request, get_user_model()))
-        # self.assertEqual(response.status_code, 302)
-        # self.assertTrue(get_user_model().objects.filter(first_name='Akshay').exists())
+        print("\n Response HTML Form:", response.json()['html'])
+        self.assertFalse(response.json()['html'])
+
+        self.assertTrue(get_user_model().objects.get(email='akshay@gmail.com'))
         # self.assertEqual(request.)
         # form.signup(user=get_user_model())
+
+    def test_post_request_form_invalid_email(self):
+        signup_form_data = {
+            'first_name': 'Akshay',
+            'last_name': 'Satpute',
+            'gender': 'male',
+            'address': 'satpute mala',
+            'locality': 'waddi',
+            'state': 'Maharashtra',
+            'district': 'Sangli',
+            'city': 'Miraj',
+            'pincode': '416410',
+            'phone_number': '7878457845',
+            'email': 'akshay@.com',
+            'password1': 'satputeps',
+            'password2': 'satputeps'
+        }
+
+        response = self.client.post(reverse('account_signup'),
+                                    data=signup_form_data,
+                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
+
+        print("Status code:", response.status_code)
+        self.assertEqual(response.status_code, 400)
+
+        print("Response Json Form:", response.json()['form'])
+        self.assertTrue(response.json()['form'])
+
+        form = SignupForm(signup_form_data)
+        print("Form Errors:", form.errors)
+        self.assertFormError(response, 'form', 'email', ['Enter a valid email address.', ])
+
+        self.assertTemplateUsed(response, 'account/signup.html')
+
+
