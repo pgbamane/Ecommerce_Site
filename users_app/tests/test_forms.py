@@ -29,3 +29,11 @@ class SignupFormTestCase(test.TestCase):
         self.assertEqual(form.errors, {})
 
         print("\n first_name:", form.cleaned_data['first_name'])
+
+    def test_form_field_order(self):
+        signup_form = SignupForm()
+
+        print("Form Field Order : ", signup_form.field_order)
+        self.assertEqual(signup_form.field_order,
+                         ['first_name', 'last_name', 'gender', 'address', 'locality', 'state', 'district', 'city',
+                          'pincode', 'phone_number', 'email', 'password1', 'password2'])
