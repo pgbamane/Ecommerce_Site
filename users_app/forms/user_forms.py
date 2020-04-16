@@ -18,18 +18,18 @@ from users_app.models import User
 #         exclude = ('date_joined', 'is_active', 'is_staff', 'is_superuser')
 
 
-class SignupForm(forms.Form):
-    first_name = forms.CharField(max_length=15, label="First Name")
-    last_name = forms.CharField(max_length=30, label="Last Name")
-
-    def __init__(self, *args, **kwargs):
-        super(SignupForm, self).__init__(*args, **kwargs)
-
-    def signup(self, request, user):
-        user = User()
-        user.first_name = self.cleaned_data['first_name']
-        user.last_name = self.cleaned_data['last_name']
-        user.save()
+# class SignupForm(forms.Form):
+#     first_name = forms.CharField(max_length=15, label="First Name")
+#     last_name = forms.CharField(max_length=30, label="Last Name")
+#
+#     def __init__(self, *args, **kwargs):
+#         super(SignupForm, self).__init__(*args, **kwargs)
+#
+#     def signup(self, request, user):
+#         user = User()
+#         user.first_name = self.cleaned_data['first_name']
+#         user.last_name = self.cleaned_data['last_name']
+#         user.save()
 
     # class Meta:
     #     model = User

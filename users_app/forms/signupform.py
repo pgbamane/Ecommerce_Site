@@ -1,9 +1,24 @@
+from allauth.account.forms import SignupForm as sign_up_form, PasswordField
+# from allauth.account.forms import BaseSignupForm
 from crispy_forms.bootstrap import InlineRadios, InlineField
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column, Submit, Reset, Field
 from django import forms
+from django.forms import EmailField
+from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
+from django.contrib.auth import get_user_model
 
 from users_app.models import User
+
+# class Base(forms.Form):
+#     username = forms.CharField(max_length=100)
+#
+#     def __init__(self, *args, **kwargs):
+#         super(Base, self).__init__(*args, **kwargs)
+#         username = self.fields['username']
+# print(username)
+
 
 GENDER_OPTIONS = [
     ('female', 'Female'),
@@ -11,20 +26,22 @@ GENDER_OPTIONS = [
 ]
 
 
-class SignupForm(forms.Form):
+class SignupForm(sign_up_form):
     first_name = forms.CharField(max_length=15,
                                  label="First Name",
                                  widget=forms.TextInput(
                                      attrs={
                                          'class': 'form-control',
-                                         'placeholder': 'Enter First Name'
+                                         'placeholder': 'Enter First Name',
+                                         'autofocus': 'autofocus',
                                      }))
     last_name = forms.CharField(max_length=30,
                                 label="Last Name",
                                 widget=forms.TextInput(
                                     attrs={
                                         'class': 'form-control',
-                                        'placeholder': 'Enter Last Name'
+                                        'placeholder': 'Enter Last Name',
+                                        'autofocus': 'autofocus',
                                     }
                                 ))
 
@@ -45,7 +62,8 @@ class SignupForm(forms.Form):
                               widget=forms.TextInput(
                                   attrs={
                                       'class': 'form-control',
-                                      'placeholder': 'Address'
+                                      'placeholder': 'Address',
+                                      'autofocus': 'autofocus',
                                   }
                               ))
     locality = forms.CharField(max_length=20,
@@ -54,7 +72,8 @@ class SignupForm(forms.Form):
                                widget=forms.TextInput(
                                    attrs={
                                        'class': 'form-control',
-                                       'placeholder': 'Locality'
+                                       'placeholder': 'Locality',
+                                       'autofocus': 'autofocus',
                                    }
                                )
                                )
@@ -63,16 +82,17 @@ class SignupForm(forms.Form):
                             widget=forms.TextInput(
                                 attrs={
                                     'class': 'form-control',
-                                    'placeholder': 'State'
+                                    'placeholder': 'State',
+                                    'autofocus': 'autofocus',
                                 }
-                            )
-                            )
+                            ))
     district = forms.CharField(max_length=30,
                                label="District",
                                widget=forms.TextInput(
                                    attrs={
                                        'class': 'form-control',
-                                       'placeholder': 'District'
+                                       'placeholder': 'District',
+                                       'autofocus': 'autofocus',
                                    }
                                )
                                )
@@ -82,7 +102,8 @@ class SignupForm(forms.Form):
                            widget=forms.TextInput(
                                attrs={
                                    'class': 'form-control',
-                                   'placeholder': 'City'
+                                   'placeholder': 'City',
+                                   'autofocus': 'autofocus',
                                }
                            ))
     pincode = forms.CharField(max_length=10,
@@ -91,7 +112,8 @@ class SignupForm(forms.Form):
                               widget=forms.TextInput(
                                   attrs={
                                       'class': 'form-control',
-                                      'placeholder': 'Pincode'
+                                      'placeholder': 'Pincode',
+                                      'autofocus': 'autofocus',
                                   }
                               ))
 
@@ -100,20 +122,21 @@ class SignupForm(forms.Form):
                                    widget=forms.TextInput(
                                        attrs={
                                            'class': 'form-control',
-                                           'placeholder': 'Phone Number'
+                                           'placeholder': 'Phone Number',
+                                           'autofocus': 'autofocus',
                                        }
                                    ))
 
     # primary key of user
-    email_id = forms.EmailField(max_length=40,
-                                label="Email ID",
-                                widget=forms.EmailInput(
-                                    attrs={
-                                        'class': 'form-control',
-                                        'placeholder': 'Email ID'
-                                    }
-                                )
-                                )
+    # email_id = forms.EmailField(max_length=40,
+    #                             label="Email ID",
+    #                             widget=forms.EmailInput(
+    #                                 attrs={
+    #                                     'class': 'form-control',
+    #                                     'placeholder': 'Email ID'
+    #                                 }
+    #                             )
+    #                             )
 
     # password1 = forms.CharField(max_length=20,
     #                             label="Password",
@@ -136,30 +159,57 @@ class SignupForm(forms.Form):
 
     # password = forms.CharField(max_length=200, label="Password")
 
-    # class Meta:
-    #     model = User
-    #     fields = "__all__"
 
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
+        self.fields['password2'] = PasswordField(label=_("Confirm Password"))
+        self.fields['email'] = EmailField(label = _('Email ID'),)
+                                          # widget={
+        #     'attrs':{
+        #         'class': 'form-control',
+        #         'placeholder': 'Enter Email Address',
+        #     }
+        # })
+        # def clean(self):
 
-    def signup(self, request, user):
+        # def custom_signup(self, request, user):
+
         # # user = User()
-        user.objects.create_user(first_name=self.cleaned_data['first_name'],
-                                 last_name=self.cleaned_data['last_name'],
-                                 gender=self.cleaned_data['gender'],
-                                 address=self.cleaned_data['address'],
-                                 locality=self.cleaned_data['locality'],
-                                 state=self.cleaned_data['state'],
-                                 district=self.cleaned_data['district'],
-                                 city=self.cleaned_data['city'],
-                                 pincode=self.cleaned_data['pincode'],
-                                 email_id=self.cleaned_data['email_id'],
-                                 password=self.cleaned_data['password1'],
-                                 phone_number=self.cleaned_data['phone_number'])
+        # def signup(self, request, user):
 
+    def save(self, request):
+        print("\nSign Up Form Save Method Called: ")
+        # actually saving of user is done by Adapter class
+        user = super(SignupForm, self).save(request)
+        return user
+
+        # user = user.objects.create_user(first_name=self.cleaned_data['first_name'],
+        #                                 last_name=self.cleaned_data['last_name'],
+        #                                 gender=self.cleaned_data['gender'],
+        #                                 address=self.cleaned_data['address'],
+        #                                 locality=self.cleaned_data['locality'],
+        #                                 state=self.cleaned_data['state'],
+        #                                 district=self.cleaned_data['district'],
+        #                                 city=self.cleaned_data['city'],
+        #                                 pincode=self.cleaned_data['pincode'],
+        #                                 email_id=self.cleaned_data['email_id'],
+        #                                 password=self.cleaned_data['password1'],
+        #                                 phone_number=self.cleaned_data['phone_number'])
         # user.first_name = self.cleaned_data['first_name']
         # user.last_name = self.cleaned_data['last_name']
+        # user.gender = self.cleaned_data['gender']
+        # user.address = self.cleaned_data['address']
+        # user.locality = self.cleaned_data['locality']
+        # user.state = self.cleaned_data['state']
+        # user.district = self.cleaned_data['district']
+        # user.city = self.cleaned_data['city']
+        # user.pincode = self.cleaned_data['pincode']
+        # user.email_id = self.cleaned_data['email_id']
+        # user.password = self.cleaned_data['password1']
+        # user.phone_number = self.cleaned_data['phone_number']
+        #
+        # # user.first_name = self.cleaned_data['first_name']
+        # # user.last_name = self.cleaned_data['last_name']
         # # user.phone_number =
         # user.save()
 
@@ -168,6 +218,7 @@ class SignupForm(forms.Form):
         helper = FormHelper()
         helper.form_id = 'id-Sign-Up-Form'
         helper.form_method = 'POST'
+        helper.form_action = reverse('account_signup')
         # helper.field_class = "col-md-6"
         # helper.label_class = "col-md-6"
         helper.layout = Layout(
@@ -192,7 +243,7 @@ class SignupForm(forms.Form):
                 css_class="form-row"
             ),
             Field('phone_number', css_class="form-group col-md-10 mb-0"),
-            Field('email_id', css_class="form-group col-md-10 mb-0"),
+            Field('email', css_class="form-group col-md-10 mb-0"),
             Field('password1', css_class="form-group col-md-10 mb-0"),
             Field('password2', css_class="form-group col-md-10 mb-0"),
             # Column('city'),
@@ -209,11 +260,14 @@ class SignupForm(forms.Form):
         # helper.
         return helper
 
-    # class Meta:
-    #     model = User
-    #     fields = ('first_name', 'last_name', 'gender', 'address', 'locality', 'state', 'email_id', 'password')
-    # #     # exclude = ('date_joined', 'is_active', 'is_staff', 'is_superuser')
+#     class Meta:
+#         model = User
+#         fields = ('first_name', 'last_name', 'gender', 'address', 'locality', 'state', 'email_id', 'password')
+# #     # exclude = ('date_joined', 'is_active', 'is_staff', 'is_superuser')
 
-    # def save(self, request):
-    #     user = super(SignUpForm, self).save(request)
-    #     return user
+# def save(self, request):
+#     user = super(SignUpForm, self).save(request)
+#     return user
+
+# form = SignupForm()
+# form.is_vali

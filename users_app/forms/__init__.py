@@ -1,1 +1,2 @@
-from . import signupform, user_forms
+from .signupform import SignupForm
+# from .user_forms import U

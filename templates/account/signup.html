@@ -1,14 +1,74 @@
 {% extends 'base.html' %}
+{% block head_javascript %}
+    {% load static %}
+    {#    <script src="{% static 'javascript/ajax_call_csrf_token.js' %}" type="text/javascript"></script>#}
+    <script type="text/javascript">
+        {#var sign_up_form_id = "#id-Sign-Up-Form";#}
+        {#var $signup_btn = $('input#sign-up-id')#}
+        {#$signup_btn.on('click', function () {#}
+        {#    alert('SignUp clicked');#}
+        {# });#}
+
+        $(document).ready(function () {
+            $("#form-div").on("click", "input#sign-up-id", function (event) {
+                event.preventDefault(); //prevents the default browser behavior  for a form submission
+                {#event.stopPropagation();#}
+                alert('Signup Form submitted');
+                console.log('Signup Form submitted')
+                {#var signup_form_id = $(this).closest("#id-Sign-Up-Form");#}
+                var sign_up_form_id = $("#id-Sign-Up-Form");
+                {#$('div#id').innerText = $(sign_up_form_id).serialize();#}
+
+                $.ajax({
+                    url: "{% url 'account_signup' %}",
+                    type: "post",
+                    data: sign_up_form_id.serialize(), //data to send to the view*
+                    headers: {'X-CSRFToken': '{{ csrf_token }}'}, // for csrf token
+                    dataType: "json", //by default json data expecting from server
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (json_response) {
+                        alert("Success");
+
+                        {#if (json_response['html']) {#}
+                        {#$(sign_up_form_id).replaceWith(json_data['html']);#}
+                        {#alert('Success');#}
+                        {# } else {#}
+                        {#$(sign_up_form_fields_div).find('.success-message').show();#}
+                        {#console.log('Success');#}
+                        {#alert('Error Sc');#}
+                    },
+                    error: function (data) {
+                        {#$(sign_up_form_id).find('.error-message').show();#}
+                        console.log('Error Occured');
+                        alert('Got an Error Dude!');
+                    }
+                });
+                return false;
+            });
+        });
+        {# })#}
+        {#;#}
+    </script>
+{% endblock head_javascript %}
+
+
 {% block content %}
     {% load crispy_forms_tags %}
     {% load crispy_forms_filters %}
+
     <div class="container col-md-offset-2" style="margin: 49px;margin-left: 343px;">
         <div class="row">
             <div class="col-md-6 col-md-offset-4" id="form-div" style="background-color: #11ec4736;
             padding: 45px; border: 1px solid #286090;border-radius: 10px;">
+                <div>
+                    {% if form_title %}
+                        {{ form_title }}
+                    {% endif %}
+                </div>
                 {% crispy form %}
                 {#                {{ form|crispy }}#}
             </div>
         </div>
     </div>
+    <div id="my">Welcome</div>
 {% endblock content %}

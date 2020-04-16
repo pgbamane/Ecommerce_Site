@@ -5,7 +5,7 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -130,10 +130,20 @@ ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email_id'
+ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
 
-ACCOUNT_SIGNUP_FORM_CLASS = 'users_app.forms.signupform.SignupForm'
+# ACCOUNT_SIGNUP_FORM_CLASS is the parent class of SignupForm (BaseSignupForm)...
+# ACCOUNT_SIGNUP_FORM_CLASS = 'users_app.forms.signupform.SignupForm'
 
+ACCOUNT_FORMS = {
+    'signup': 'users_app.forms.signupform.SignupForm',
+}
+
+ACCOUNT_ADAPTER = 'users_app.adapters.signup_adapter.SignupAdapter'
+
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+
+ACCOUNT_EMAIL_VERIFICATION = "none"
 # ACCOUNT_AUTHENTICATION_METHOD = 'email'
 # ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_USERNAME_REQUIRED = False
@@ -142,3 +152,9 @@ ACCOUNT_SIGNUP_FORM_CLASS = 'users_app.forms.signupform.SignupForm'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+# ACCOUNT_SIGNUP_REDIRECT = 'users_app.utils.custom_signup_redirect'
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
+SOCIALACCOUNT_AUTO_SIGNUP = False
+

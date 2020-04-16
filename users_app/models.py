@@ -12,6 +12,14 @@ GENDER_OPTIONS = [
 ]
 
 
+class MyUser():
+    first_name = "Pra"
+
+    def user_save(self, user):
+        user.first_name = self.first_name
+        user.save()
+
+
 class User(PermissionsMixin, AbstractBaseUser):
     """Django's permission framework gives you all the methods and db fields to support permission model"""
     first_name = models.CharField(db_column="First Name", max_length=15)
@@ -24,17 +32,17 @@ class User(PermissionsMixin, AbstractBaseUser):
     city = models.CharField(db_column='City', max_length=30, help_text="City or Taluka")
     pincode = models.CharField(db_column='Pincode', max_length=10, help_text="Pincode stored as Chars")
 
-    phone_number = models.CharField(db_column="Phone Number", max_length=13, unique=True)
+    phone_number = models.CharField(db_column="Phone Number", max_length=13, unique=True, null=True, blank=False)
 
     # primary key of user
-    email_id = models.EmailField(db_column="Email ID", max_length=40, unique=True, primary_key=True)
+    email = models.EmailField(db_column="Email ID", max_length=40, unique=True, primary_key=True)
 
     password = models.CharField(db_column="Password", max_length=200)
     date_joined = models.DateTimeField(db_column="Date Joined", auto_now_add=True)
 
-    USERNAME_FIELD = 'email_id'
+    USERNAME_FIELD = 'email'
     # no need as email_id is usernamefield
-    EMAIL_FIELD = 'email_id'
+    EMAIL_FIELD = 'email'
     # for createsuperuser command will prompt for following
     # REQUIRED_FIELDS = ['first_name', 'last_name', 'gender', 'phone_number']
     REQUIRED_FIELDS = ['phone_number']
