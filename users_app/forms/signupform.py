@@ -138,33 +138,14 @@ class SignupForm(sign_up_form):
     #                             )
     #                             )
 
-    # password1 = forms.CharField(max_length=20,
-    #                             label="Password",
-    #                             widget=forms.PasswordInput(
-    #                                 attrs={
-    #                                     'class': 'form-control',
-    #                                     'placeholder': 'Enter Password'
-    #                                 }
-    #                             )
-    #                             )
-    # password2 = forms.CharField(max_length=20,
-    #                             label="Confirm Password",
-    #                             widget=forms.PasswordInput(
-    #                                 attrs={
-    #                                     'class': 'form-control',
-    #                                     'placeholder': 'Enter Password again'
-    #                                 }
-    #                             )
-    #                             )
-
-    # password = forms.CharField(max_length=200, label="Password")
-
+    field_order = ['first_name', 'last_name', 'gender', 'address', 'locality', 'state', 'district', 'city',
+                   'pincode', 'phone_number', 'email', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
         self.fields['password2'] = PasswordField(label=_("Confirm Password"))
-        self.fields['email'] = EmailField(label = _('Email ID'),)
-                                          # widget={
+        self.fields['email'] = EmailField(label=_('Email ID'), )
+        # widget={
         #     'attrs':{
         #         'class': 'form-control',
         #         'placeholder': 'Enter Email Address',
