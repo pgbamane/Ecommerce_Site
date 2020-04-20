@@ -50,7 +50,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     is_active = models.BooleanField(
         _('is_active'),
         db_column="Is Active",
-        default=False,
+        default=True,
         help_text=_(
             "Designates whether this user should be considered active or not."
         ),
