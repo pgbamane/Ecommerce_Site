@@ -174,6 +174,7 @@ class SignupViewTestCase(test.TestCase):
         response = self.client.post(reverse('account_signup'),
                                     data=signup_form_data,
                                     HTTP_X_REQUESTED_WITH='XMLHttpRequest')
+        # content_type=MULTIPART_CONTENT , the values in data will be transmitted with a content type of multipart/form-data.
 
         self.assertEqual(response.status_code, 400)
 
@@ -183,4 +184,3 @@ class SignupViewTestCase(test.TestCase):
         form = SignupForm(signup_form_data)
         print("Form errors : ", form.errors)
         self.assertFormError(response, 'form', 'password2', 'You must type the same password each time.')
-

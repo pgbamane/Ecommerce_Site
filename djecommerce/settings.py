@@ -136,7 +136,7 @@ ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
 # ACCOUNT_SIGNUP_FORM_CLASS = 'users_app.forms.signupform.SignupForm'
 
 ACCOUNT_FORMS = {
-    'signup': 'users_app.forms.signupform.SignupForm',
+    'signup': 'users_app.forms.signup_form.SignupForm',
 }
 
 ACCOUNT_ADAPTER = 'users_app.adapters.signup_adapter.SignupAdapter'

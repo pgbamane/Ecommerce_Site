@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block head_javascript %}
     {% load static %}
-    {#    <script src="{% static 'javascript/ajax_call_csrf_token.js' %}" type="text/javascript"></script>#}
+    <script src="{% static 'javascript/ajax_call_csrf_token.js' %}" type="text/javascript"></script>
     <script type="text/javascript">
         {#var sign_up_form_id = "#id-Sign-Up-Form";#}
         {#var $signup_btn = $('input#sign-up-id')#}
@@ -11,38 +11,63 @@
 
         $(document).ready(function () {
             $("#form-div").on("click", "input#sign-up-id", function (event) {
-                event.preventDefault(); //prevents the default browser behavior  for a form submission
+                event.preventDefault(); //prevents the default browser behavior  for a form submission#page refresh
                 {#event.stopPropagation();#}
                 alert('Signup Form submitted');
                 console.log('Signup Form submitted')
                 {#var signup_form_id = $(this).closest("#id-Sign-Up-Form");#}
                 var sign_up_form_id = $("#id-Sign-Up-Form");
-                {#$('div#id').innerText = $(sign_up_form_id).serialize();#}
+                $('div#my').innerText = sign_up_form_id.serialize();
+
+                console.log("Form Serialized: ", sign_up_form_id.serialize());
 
                 $.ajax({
                     url: "{% url 'account_signup' %}",
-                    type: "post",
+                    type: "POST",
                     data: sign_up_form_id.serialize(), //data to send to the view*
-                    headers: {'X-CSRFToken': '{{ csrf_token }}'}, // for csrf token
+                    {#data: {'first_name': 'Pradnya'},#}
+                    {#headers: {'X-CSRFToken': '{{ csrf_token }}'}, // for csrf token working way to send it#}
                     dataType: "json", //by default json data expecting from server
-                    contentType: 'application/json; charset=utf-8',
-                    success: function (json_response) {
-                        alert("Success");
+                    {#contentType: 'application/json',#}
+                    statusCode: {
+                        200: function (response, textStatus, error) {
+                            if (response.location) {
+                                alert("You will now be redirected.");
+                                window.location = json_response.location;
+                            }
+                        },
+                        400: function (response, textStatus, error) {
 
-                        {#if (json_response['html']) {#}
-                        {#$(sign_up_form_id).replaceWith(json_data['html']);#}
-                        {#alert('Success');#}
-                        {# } else {#}
-                        {#$(sign_up_form_fields_div).find('.success-message').show();#}
-                        {#console.log('Success');#}
-                        {#alert('Error Sc');#}
+                        },
                     },
-                    error: function (data) {
-                        {#$(sign_up_form_id).find('.error-message').show();#}
-                        console.log('Error Occured');
-                        alert('Got an Error Dude!');
-                    }
-                });
+                    {#success: function (json_response) {#}
+                    {#    if (json_response.location) {#}
+                    {#        alert("You will now be redirected.");#}
+                    {#        window.location = json_response.location;#}
+                    {#    }#}
+                    {#if (json_response['html']) {#}
+                    {#$(sign_up_form_id).replaceWith(json_data['html']);#}
+                    {#alert('Success');#}
+                    {# } else {#}
+                    {#$(sign_up_form_fields_div).find('.success-message').show();#}
+                    {#console.log('Success');#}
+                    {#alert('Error Sc');#}
+                    {# },#}
+                    {#error: function (data) {#}
+                    {#$(sign_up_form_id).find('.error-message').show();#}
+                    {#    console.log('error : Error Occured');#}
+                    {#    alert('Got an Error Dude!');#}
+                    {# }#}
+                })
+                    .done(function (data) {
+                        alert(data);
+                    })
+                    .fail(function (jqXHR, textStatus) {
+                        alert('Something went wrong:' + textStatus);
+                    })
+                    .always(function (jqXHR, textStatus) {
+                        alert('Ajax Request was finished')
+                    });
                 return false;
             });
         });
@@ -70,5 +95,5 @@
             </div>
         </div>
     </div>
-    <div id="my">Welcome</div>
+    <div id="my"></div>
 {% endblock content %}
