@@ -27,9 +27,9 @@ class SignupView(AllAuthSignupView):
         return context_data
 
     def form_valid(self, form):
-        # return super(SignupView, self).form_valid(form)
-        self.user = form.save(self.request)
-        return HttpResponseRedirect(redirect_to=self.get_success_url())
+        return super(SignupView, self).form_valid(form)
+        # self.user = form.save(self.request)
+        # return HttpResponseRedirect(redirect_to=self.get_success_url())
 
     def post(self, request, *args, **kwargs):
         return super(SignupView, self).post(request, *args, **kwargs)
