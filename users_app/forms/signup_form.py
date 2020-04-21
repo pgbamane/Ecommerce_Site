@@ -47,7 +47,7 @@ class SignupForm(sign_up_form):
 
     gender = forms.ChoiceField(label="Gender",
                                choices=GENDER_OPTIONS,
-                               # default=GENDER_OPTIONS[0][0],
+                               initial=GENDER_OPTIONS[0][0],
                                widget=forms.RadioSelect(
                                    # attrs={
                                    #     'class': 'form-control',
@@ -144,7 +144,14 @@ class SignupForm(sign_up_form):
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
         self.fields['password2'] = PasswordField(label=_("Confirm Password"))
-        self.fields['email'] = EmailField(label=_('Email ID'), )
+        self.fields['email'] = EmailField(label=_('Email ID'),
+                                          widget=forms.EmailInput(
+                                              attrs={
+                                                  'class': 'form-control',
+                                                  'placeholder': 'Email ID'
+                                              }
+                                          ))
+        # self.fields['gender']._meta.defa
 
     def save(self, request):
         print("\nSign Up Form Save Method Called: ")
