@@ -145,54 +145,12 @@ class SignupForm(sign_up_form):
         super(SignupForm, self).__init__(*args, **kwargs)
         self.fields['password2'] = PasswordField(label=_("Confirm Password"))
         self.fields['email'] = EmailField(label=_('Email ID'), )
-        # widget={
-        #     'attrs':{
-        #         'class': 'form-control',
-        #         'placeholder': 'Enter Email Address',
-        #     }
-        # })
-        # def clean(self):
-
-        # def custom_signup(self, request, user):
-
-        # # user = User()
-        # def signup(self, request, user):
 
     def save(self, request):
         print("\nSign Up Form Save Method Called: ")
         # actually saving of user is done by Adapter class
         user = super(SignupForm, self).save(request)
         return user
-
-        # user = user.objects.create_user(first_name=self.cleaned_data['first_name'],
-        #                                 last_name=self.cleaned_data['last_name'],
-        #                                 gender=self.cleaned_data['gender'],
-        #                                 address=self.cleaned_data['address'],
-        #                                 locality=self.cleaned_data['locality'],
-        #                                 state=self.cleaned_data['state'],
-        #                                 district=self.cleaned_data['district'],
-        #                                 city=self.cleaned_data['city'],
-        #                                 pincode=self.cleaned_data['pincode'],
-        #                                 email_id=self.cleaned_data['email_id'],
-        #                                 password=self.cleaned_data['password1'],
-        #                                 phone_number=self.cleaned_data['phone_number'])
-        # user.first_name = self.cleaned_data['first_name']
-        # user.last_name = self.cleaned_data['last_name']
-        # user.gender = self.cleaned_data['gender']
-        # user.address = self.cleaned_data['address']
-        # user.locality = self.cleaned_data['locality']
-        # user.state = self.cleaned_data['state']
-        # user.district = self.cleaned_data['district']
-        # user.city = self.cleaned_data['city']
-        # user.pincode = self.cleaned_data['pincode']
-        # user.email_id = self.cleaned_data['email_id']
-        # user.password = self.cleaned_data['password1']
-        # user.phone_number = self.cleaned_data['phone_number']
-        #
-        # # user.first_name = self.cleaned_data['first_name']
-        # # user.last_name = self.cleaned_data['last_name']
-        # # user.phone_number =
-        # user.save()
 
     @property
     def helper(self):
@@ -231,24 +189,8 @@ class SignupForm(sign_up_form):
             Row(
                 Submit('submit', 'Sign Up', css_class="btn col-md-offset-4 col-md-2 mb-0",
                        css_id='sign-up-id'),
-                Reset('reset', 'Reset', css_class='btn col-md-offset-1 col-md-2 btn-danger')
+                Reset('reset', 'Reset', css_class='btn col-md-offset-2 col-md-2 mb-0 btn-danger')
             )
         )
-
         # helper.attrs('novalidate')
-        # helper.on
-        # helper.form_action = 'sign_up'
-        # helper.
         return helper
-
-#     class Meta:
-#         model = User
-#         fields = ('first_name', 'last_name', 'gender', 'address', 'locality', 'state', 'email_id', 'password')
-# #     # exclude = ('date_joined', 'is_active', 'is_staff', 'is_superuser')
-
-# def save(self, request):
-#     user = super(SignUpForm, self).save(request)
-#     return user
-
-# form = SignupForm()
-# form.is_vali
