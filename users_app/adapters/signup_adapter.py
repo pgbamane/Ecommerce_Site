@@ -42,22 +42,31 @@ class SignupAdapter(DefaultAccountAdapter):
         city = form_data.get('city')
         pincode = form_data.get('pincode')
         phone_number = form_data.get('phone_number')
-        if gender:
-            user_field(user, 'gender', gender)
-        if address:
-            user_field(user, "address", address)
-        if locality:
-            user_field(user, "locality", locality)
-        if state:
-            user_field(user, 'state', state)
-        if district:
-            user_field(user, 'district', district)
-        if city:
-            user_field(user, 'city', city)
-        if pincode:
-            user_field(user, 'pincode', pincode)
-        if phone_number:
-            user_field(user, 'phone_number', phone_number)
+        # if gender:
+        # user_field(user, 'gender', gender)
+        # # if address:
+        # user_field(user, "address", address)
+        # # if locality:
+        # user_field(user, "locality", locality)
+        # # if state:
+        # user_field(user, 'state', state)
+        # # if district:
+        # user_field(user, 'district', district)
+        # # if city:
+        # user_field(user, 'city', city)
+        # # if pincode:
+        # user_field(user, 'pincode', pincode)
+        # # if phone_number:
+        # user_field(user, 'phone_number', phone_number)
+
+        user.gender = gender
+        user.address = address
+        user.locality = locality
+        user.state = state
+        user.district = district
+        user.city = city
+        user.pincode = pincode
+        user.phone_number = phone_number
 
         # finally save User with all fields
         user.save()
