@@ -59,14 +59,22 @@ class SignupAdapter(DefaultAccountAdapter):
         # # if phone_number:
         # user_field(user, 'phone_number', phone_number)
 
-        user.gender = gender
-        user.address = address
-        user.locality = locality
-        user.state = state
-        user.district = district
-        user.city = city
-        user.pincode = pincode
-        user.phone_number = phone_number
+        if gender:
+            user.gender = gender
+        if address:
+            user.address = address
+        if locality:
+            user.locality = locality
+        if state:
+            user.state = state
+        if district:
+            user.district = district
+        if city:
+            user.city = city
+        if pincode:
+            user.pincode = pincode
+        if phone_number:
+            user.phone_number = phone_number
 
         # finally save User with all fields
         user.save()
