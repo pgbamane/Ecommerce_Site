@@ -194,9 +194,9 @@ class SignupForm(sign_up_form):
             Field('password2', css_class="form-group col-md-10 mb-0"),
             # Column('city'),
             Row(
-                Submit('submit', 'Sign Up', css_class="btn col-md-offset-4 col-md-2 mb-0",
+                Submit('submit', 'Sign Up', css_class="form-group btn col-md-offset-4 col-md-2 mb-0",
                        css_id='sign-up-id'),
-                Reset('reset', 'Reset', css_class='btn col-md-offset-2 col-md-2 mb-0 btn-danger')
+                Reset('reset', 'Reset', css_class='form-group btn col-md-offset-2 col-md-2 mb-0 btn-danger')
             )
         )
         # helper.attrs('novalidate')

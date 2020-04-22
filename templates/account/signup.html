@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block head_javascript %}
     {% load static %}
+    {% load socialaccount %}
     <script src="{% static 'javascript/ajax_call_csrf_token.js' %}" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -116,16 +117,31 @@
     <div class="container col-md-offset-2" style="margin: 49px;margin-left: 343px;">
         <div class="row">
             <div class="col-md-6 col-md-offset-4" id="form-div" style="background-color: #11ec4736;
-            padding: 45px; border: 1px solid #286090;border-radius: 10px;">
-                <div>
-                    {% if form_title %}
-                        {{ form_title }}
-                    {% endif %}
+            padding: 30px 45px; border: 1px solid #286090;border-radius: 10px;">
+                <div class="text-center font-weight-bold text-dark font-">
+                    <h3>
+                        {% if form_title %}
+                            {{ form_title }}
+                        {% endif %}
+                    </h3>
                 </div>
                 {% crispy form %}
                 {#                {{ form|crispy }}#}
+                <hr>
+                <div>
+                    <p>
+                        <a href="{% provider_login_url 'google' %}"
+                                {#                          class="btn btn-social-icon btn-google">#}
+                                {#                        <span class="fa fa-google"></span>#}
+                                {#                    </a>#}
+                           class="btn btn-block btn-social btn-google">
+                            <span class="fa fa-google"></span>
+                            <span class="text-capitalize"> Signup with Gmail</span>
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div id="my"></div>
+
 {% endblock content %}
