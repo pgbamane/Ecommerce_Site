@@ -24,21 +24,22 @@ class User(PermissionsMixin, AbstractBaseUser):
     """Django's permission framework gives you all the methods and db fields to support permission model"""
     first_name = models.CharField(db_column="first_name", max_length=15)
     last_name = models.CharField(max_length=30)
-    gender = models.CharField(max_length=10, choices=GENDER_OPTIONS, default=GENDER_OPTIONS[0][0])
-    address = models.CharField(max_length=255, help_text="Flat No, Building, Street, Area")
-    locality = models.CharField(max_length=20, help_text='Locality/Town')
-    state = models.CharField(max_length=30)
-    district = models.CharField(max_length=30)
-    city = models.CharField(max_length=30, help_text="City or Taluka")
-    pincode = models.CharField(max_length=10, help_text="Pincode stored as Chars")
+    gender = models.CharField(max_length=10, choices=GENDER_OPTIONS, blank=True, default="")
+    address = models.CharField(max_length=255, help_text="Flat No, Building, Street, Area", default="")
+    locality = models.CharField(max_length=20, help_text='Locality/Town', default="")
+    state = models.CharField(max_length=30, default="")
+    district = models.CharField(max_length=30, default="")
+    city = models.CharField(max_length=30, help_text="City or Taluka", default="")
+    pincode = models.CharField(max_length=10, help_text="Pincode stored as Chars", default="")
 
-    phone_number = models.CharField(max_length=13, unique=True, null=True, blank=False)
+    phone_number = models.CharField(max_length=13, unique=True, null=True, blank=True
+                                    )  # unique treats null=True different values, but empty string will not be unique
 
     # primary key of user
     email = models.EmailField(max_length=40, unique=True, primary_key=True)
 
-    password = models.CharField(max_length=200)
-    date_joined = models.DateTimeField(auto_now_add=True)
+    password = models.CharField(max_length=200, default="")
+    date_joined = models.DateTimeField(auto_now_add=True, null=True)
 
     USERNAME_FIELD = 'email'
     # no need as email_id is usernamefield
