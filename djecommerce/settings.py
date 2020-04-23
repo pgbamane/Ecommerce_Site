@@ -5,7 +5,7 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -17,11 +17,24 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'djecommerce',
     'core',
+    'users_app',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.twitter',
+
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_FAIL_SILENTLY = not DEBUG
+
+# auth setting
+AUTH_USER_MODEL = 'users_app.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -67,8 +80,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": 'ecom_db',
+        'USER': 'pradnya',
+        'PASSWORD': 'girish',
+
     }
 }
 
@@ -95,3 +111,50 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '314332771646-n58s28s4nnph9j1gvlhdfe2cumu73cph.apps.googleusercontent.com',
+            'secret': 'qEDLx2MKl3ArOYkAhzFbKdXM',
+            'key': ''
+        }
+    }
+}
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
+
+# ACCOUNT_SIGNUP_FORM_CLASS is the parent class of SignupForm (BaseSignupForm)...
+# ACCOUNT_SIGNUP_FORM_CLASS = 'users_app.forms.signupform.SignupForm'
+
+ACCOUNT_FORMS = {
+    'signup': 'users_app.forms.signup_form.SignupForm',
+}
+
+ACCOUNT_ADAPTER = 'users_app.adapters.signup_adapter.SignupAdapter'
+
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+
+ACCOUNT_EMAIL_VERIFICATION = "none"
+# ACCOUNT_AUTHENTICATION_METHOD = 'email'
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_USERNAME_REQUIRED = False
+# # ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email_id'
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+# ACCOUNT_SIGNUP_REDIRECT = 'users_app.utils.custom_signup_redirect'
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
+SOCIALACCOUNT_AUTO_SIGNUP = False
+
