@@ -34,9 +34,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b969e3b-c28a-423f-9431-4d31fbfb035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_app/forms/signup_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_app/forms/signup_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,23 +67,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/javascript" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/djecommerce" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\javascript" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\css" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images" />
-      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static_in_env\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\users_app\tests" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\users_app\forms" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\users_app\managers" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images\banners" />
       <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images\slides" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\djecommerce" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\javascript" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\css" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site" />
+      <recent name="C:\Users\Girish\Desktop\Ecommerce_Site\static\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -153,6 +151,7 @@
       <workItem from="1587445572675" duration="474000" />
       <workItem from="1587454204033" duration="15149000" />
       <workItem from="1587483632215" duration="9789000" />
+      <workItem from="1587633709667" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="users_app created">
       <created>1586458223246</created>

@@ -1,3 +1,4 @@
+from django.apps import apps
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -15,6 +16,8 @@ urlpatterns = [
 
     path('', include('core.urls')),
 
+    path('i18n/', include('django.conf.urls.i18n')),
+
     # User management
     # path('users_app/', include('users_app.urls')),
     path('accounts/signup/', views.SignupView.as_view(), name="account_signup"),
@@ -25,6 +28,8 @@ urlpatterns = [
     # path('accounts/socialaccount_signup', SignupView.as_view(), name='socialaccount_signup'),
     path('accounts/', include(default_urlpatterns(GoogleProvider))),
     # path('accounts/', include('allauth.urls')),
+
+    path('', include(apps.get_app_config('oscar').urls[0])),
 
 ]
 
